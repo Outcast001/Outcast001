@@ -1,6 +1,6 @@
 <div align="justify">
 <h1> Outcast001</h1>
-  <h2> Oi, eu sou <i>Outcast001</i>! - nome real: Adryan </h2>
+  <h2> Oi, eu sou Outcast001! - nome real: Adryan </h2>
   <h4> Atualmente Estudando programação</h3>
   <h4>Interessado em <b><i>Data-visualization</i></b> e aficionado por <i>ML</i> (<i><b>Machine Learning</b></i> - Aprendizado de máquina)<h3>
 </div>  
