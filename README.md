@@ -9,7 +9,7 @@
 - 📫 How to reach me: adryan.r1@outlook.com (email)
 - 😄 Pronouns: ?...
 - ⚡ Curiosity: If you interact with me I'll be very happy! - really...
-
+![Snake animation](https://github.com/seu-usuário-aqui/seu-usuário-aqui/blob/output/github-contribution-grid-snake.svg)
 <h6>I'm still a high school student, and I take a technical course in informatics in the afternoon at the federal institute in the north of <i>Minas Gerais!</i></h6>
 <h6>I've been learning a lot of programming this past summer!</h6>
 <h6>I've been active on <a href="https://www.kaggle.com/" target="blank_">kaggle</a> - the community for machine learning and data science (where the strengths are) - and learned a lot there!</h6>
@@ -26,5 +26,3 @@
 <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Outcast001&layout=compact&langs_count=7&theme=dracula">
 <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Outcast001&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"></a>
 </div>
-
-![Snake animation](https://github.com/seu-usuário-aqui/Outcast001/blob/output/github-contribution-grid-snake.svg)
