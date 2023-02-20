@@ -12,7 +12,7 @@
 ![Snake animation](https://github.com/Outcast001/Outcast001/blob/output/github-contribution-grid-snake.svg)
 <h6>I'm still a high school student, and I take a technical course in informatics in the afternoon at the federal institute in the north of <i>Minas Gerais!</i></h6>
 <h6>I've been learning a lot of programming this past summer!</h6>
-<h6>I've been active on <a href="https://www.kaggle.com/" target="blank_">kaggle</a> - the community for machine learning and data science (where the strengths are) - and learned a lot there!</h6>
+<h6>I've been active on <a href="https://www.kaggle.com/" target="blank_">kaggle</a> - the community for machine learning and data science - and learned a lot there!</h6>
 <h6>I live in Brazil, in Minas Gerais - the land of cheese bread!</h6>
 
 ## Contatos:
