@@ -12,3 +12,4 @@ class Check():
         else: 
             print(f"Done!")
             print("Casa escolhida:", self.num)
+            return(self.num)

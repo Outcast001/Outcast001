@@ -1,47 +1,104 @@
 """ 
-Adryan - Última atualização: 02 de Março de 2023, ás 18:18
-Classes que realizam algumas features relativas ao projeto. 
+Adryan - Última atualização: 04 de Março de 2023, ás 21:30
 """
+
+# Imports de algumas features do projeto. 
 from tabela import Tabela
 from verificacao import Check
 from escolhaXouY import PlayChoice
+from indice_Inc import Indice
+# Tabuleiro (formato)
+table = [[1,2,3],[4,5,6],[7,8,9]]
 
 # instância do tabuleiro de TTT (Jogo da Velha)
-tabela = Tabela()
-
-# solicita entrada do usuário
-playChoice = PlayChoice().playChoice
-
-# Verifica se a entrada do usuário é válida
-Check(playChoice).checkNum()
+tabela = Tabela(table)
 
 def loopMarc(table):
-    entry = "funEntry()" # Referencia 'PlayChoice()'
-    for j in range(0, 3):
-        if entry in table[j]:
-            table[j][table[j].index(entry)] = "X"
-            "funTable()"
-            "checkWin(table)"
-            "loopMarc(table)"
+    o = 0
+    x = 1
+    if x > o:
+        x = 0
+        o = 1
+                
+        # solicita entrada do usuário
+        playChoice = PlayChoice().playChoice
 
-# Imprime o tabuleiro de TTT 
-tabela.printTable()
+        # Verifica se a entrada do usuário é válida
+        playChoice = Check(playChoice).checkNum()
+        
+        # Valor de entrada do jogador.
+        entry = playChoice 
+
+        # instância da classe "Indice".
+        indice = Indice(x=entry) 
+
+        # Obtem a posição e o índice da posição do valor de entrada.
+        posicao, indice_posicao = indice.get_index()
+
+        # Substitui o valor da posição por "X".
+        table[posicao][indice_posicao] = 'X' 
+
+        # Imprime a tabela
+        tabela.printTable()
+        ''' - NÃO FUNCIONA AQUI - MÓDULO OU FUNÇÃO NÃO EXISTEM - 
+        # Verifica se há um padrão (OBS: Substituir por estrutura IF/ELSE/ELIF).
+        checkWin(table)'''
+
+    if x < o:
+        o = 0
+  
+        # solicita entrada do usuário
+        playChoice = PlayChoice().playChoice
+
+        # Verifica se a entrada do usuário é válida
+        playChoice = Check(playChoice).checkNum()
+        
+        # Valor de entrada do jogador.
+        entry = playChoice 
+
+        # instância da classe "Indice".
+        indice = Indice(x=entry) 
+
+        # Obtem a posição e o índice da posição do valor de entrada.
+        posicao, indice_posicao = indice.get_index()
+
+        # Substitui o valor da posição por "O".
+        table[posicao][indice_posicao] = "O"
+        
+        # Imprime a tabela
+        tabela.printTable()
+        ''' - NÃO FUNCIONA AQUI - MÓDULO OU FUNÇÃO NÃO EXISTEM - 
+        # Verifica se há um padrão (OBS: Substituir por estrutura IF/ELSE/ELIF).
+        checkWin(table)'''
+
+    # Reinicia função. Todas as alterações foram salvas.
+    loopMarc(tabela.table)
+
+loopMarc(table=tabela.table) 
+
 
 """ - PROBLEMAS:
 
-QUESTÃO 01: Como fazer com que um usuário marque uma casa por vez?
+>>> QUESTÃO 01: Como fazer com que um usuário marque uma casa por vez?
     - Loop de repetição (laço for... in ...?)
     - Vide 'tests' (sub-pasta do projeto)
+    >>> - DONE
 
-QUESTÃO 02: Como marcar as casas no tabuleiro?
+>>> QUESTÃO 02: Como marcar as casas no tabuleiro?
     - utilizar método insert?
-    R: Usar estrutura "IF/ELIF/ELSE"
+    >>> - DONE
 
-QUESTÃO 03: Como identificar uma derrota, vitória ou um empate?
+>>> QUESTÃO 03: Como identificar uma derrota, vitória ou um empate?
     -   listar todos os casos possíveis e usar 
         um laço for... in... para varrer a lista e 
         determinar os resultados possíveis (VITÓRIA || DERROTA)
 
-OBSERVAÇÃO DA QUESTÃO 03: Observa-se que a representação de cada caso possível é,
+>>> - OBSERVAÇÃO DA QUESTÃO 03: Observa-se que a representação de cada caso possível é,
 resumidamente, inviável. Dispendiosa.
+
+>>> - SOLUÇÃO DA QUESTÃO 3: Utilizar estrutura de controle "IF/ELIF/ELSE"
+
+>>> IDÉIA: Transformar linhas "33" a "52" em funções/métodos e usar num bloco de código
+em outras linhas.
+    - Isso tornaria o código mais legível e facilitaria a manutenção.
 """
