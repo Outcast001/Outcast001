@@ -10,6 +10,4 @@ class Check():
             self.num = int(input("Entrada inválida!\nDigite uma casa diferente de {}: "
             .format(self.num)))
         else: 
-            print(f"Done!")
-            print("Casa escolhida:", self.num)
             return(self.num)
