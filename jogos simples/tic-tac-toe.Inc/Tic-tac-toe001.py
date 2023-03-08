@@ -1,5 +1,5 @@
 """ 
-Adryan - Última atualização: 04 de Março de 2023, ás 21:30
+Adryan - Última atualização: 08 de Março de 2023, ás 16:06 (P.M.)
 """
 
 # Imports de algumas features do projeto. 
@@ -7,8 +7,12 @@ from tabela import Tabela
 from verificacao import Check
 from escolhaXouY import PlayChoice
 from indice_Inc import Indice
+from gameResult import CheckWin
+
 # Tabuleiro (formato)
-table = [[1,2,3],[4,5,6],[7,8,9]]
+table = [[1,2,3],
+         [4,5,6],
+         [7,8,9]]
 
 # instância do tabuleiro de TTT (Jogo da Velha)
 tabela = Tabela(table)
@@ -40,9 +44,10 @@ def loopMarc(table):
 
         # Imprime a tabela
         tabela.printTable()
-        ''' - NÃO FUNCIONA AQUI - MÓDULO OU FUNÇÃO NÃO EXISTEM - 
-        # Verifica se há um padrão (OBS: Substituir por estrutura IF/ELSE/ELIF).
-        checkWin(table)'''
+        
+        # Verifica se há um padrão 
+        checkResult = CheckWin()
+        checkResult.checkWin(table=tabela.table)
 
     if x < o:
         o = 0
@@ -67,15 +72,15 @@ def loopMarc(table):
         
         # Imprime a tabela
         tabela.printTable()
-        ''' - NÃO FUNCIONA AQUI - MÓDULO OU FUNÇÃO NÃO EXISTEM - 
-        # Verifica se há um padrão (OBS: Substituir por estrutura IF/ELSE/ELIF).
-        checkWin(table)'''
+        
+        # Verifica se há um padrão 
+        checkResult = CheckWin()
+        checkResult.checkWin(table=tabela.table)
 
     # Reinicia função. Todas as alterações foram salvas.
     loopMarc(tabela.table)
 
-loopMarc(table=tabela.table) 
-
+loopMarc(table=tabela.table)
 
 """ - PROBLEMAS:
 
@@ -101,4 +106,7 @@ resumidamente, inviável. Dispendiosa.
 >>> IDÉIA: Transformar linhas "33" a "52" em funções/métodos e usar num bloco de código
 em outras linhas.
     - Isso tornaria o código mais legível e facilitaria a manutenção.
+
+>>> IDÉIA 2: Utilizar um laço de repetição ('while statment'), para executar o jogo até
+que dada condição seja atendida - condição de parada.
 """
