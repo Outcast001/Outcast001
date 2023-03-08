@@ -13,31 +13,22 @@ class Indice():
                     var = table[0]
                     posicao = table.index(var)
                     indice_posicao = var.index(self.x)
-                    print(f"Posição de {self.x}: ", table.index(var))
-                    print(f"índice de {self.x}:", var.index(self.x))
-                    print(f"Valor do índice de {self.x}:", table[0][var.index(self.x)])
                     return(posicao, indice_posicao)
 
                 elif (table[1][j] == self.x) == True:
                     var = table[1]
                     posicao = table.index(var)
                     indice_posicao = var.index(self.x)
-                    print(f"Posição de {self.x}: ", table.index(var))
-                    print(f"índice de {self.x}:", var.index(self.x))
-                    print(f"Valor do índice de {self.x}:", table[1][var.index(self.x)])
                     return(posicao, indice_posicao)
 
                 elif (table[2][j] == self.x) is True:
                     var = table[2]
                     posicao = table.index(var)
                     indice_posicao = var.index(self.x)
-                    print(f"Posição de {self.x}: ", table.index(var))
-                    print(f"índice de {self.x}:", var.index(self.x))
-                    print(f"Valor do índice de {self.x}:", table[2][var.index(self.x)])
                     return(posicao, indice_posicao)
                 
                 else:
-                    print(False)
+                    pass
         except:
             print("pass")
 
