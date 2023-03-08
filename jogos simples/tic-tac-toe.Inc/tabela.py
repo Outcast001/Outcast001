@@ -7,7 +7,10 @@ class Tabela():
 
     def printTable(self):
         """ Como o tabuleiro se parece """
-        print(self.table[0])
-        print(self.table[1])
+        print(self.table[0], end='\r')
+        print()
+        print(self.table[1], end='\r')
+        print()
         print(self.table[2])
+        print()
         
