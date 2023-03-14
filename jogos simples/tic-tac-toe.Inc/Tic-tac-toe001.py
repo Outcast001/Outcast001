@@ -1,5 +1,5 @@
 """ 
-Adryan - Última atualização: 08 de Março de 2023, ás 16:06 (P.M.)
+Adryan - Última atualização: 13 de Março de 2023, ás 15:22 (P.M.)
 """
 
 # Imports de algumas features do projeto. 
@@ -82,31 +82,7 @@ def loopMarc(table):
 
 loopMarc(table=tabela.table)
 
-""" - PROBLEMAS:
-
->>> QUESTÃO 01: Como fazer com que um usuário marque uma casa por vez?
-    - Loop de repetição (laço for... in ...?)
-    - Vide 'tests' (sub-pasta do projeto)
-    >>> - DONE
-
->>> QUESTÃO 02: Como marcar as casas no tabuleiro?
-    - utilizar método insert?
-    >>> - DONE
-
->>> QUESTÃO 03: Como identificar uma derrota, vitória ou um empate?
-    -   listar todos os casos possíveis e usar 
-        um laço for... in... para varrer a lista e 
-        determinar os resultados possíveis (VITÓRIA || DERROTA)
-
->>> - OBSERVAÇÃO DA QUESTÃO 03: Observa-se que a representação de cada caso possível é,
-resumidamente, inviável. Dispendiosa.
-
->>> - SOLUÇÃO DA QUESTÃO 3: Utilizar estrutura de controle "IF/ELIF/ELSE"
-
->>> IDÉIA: Transformar linhas "33" a "52" em funções/métodos e usar num bloco de código
-em outras linhas.
-    - Isso tornaria o código mais legível e facilitaria a manutenção.
-
->>> IDÉIA 2: Utilizar um laço de repetição ('while statment'), para executar o jogo até
+""" 
+>>> IDÉIA: Utilizar um laço de repetição ('while statment'), para executar o jogo até
 que dada condição seja atendida - condição de parada.
 """
