@@ -1,11 +1,10 @@
 """ 
-Adryan - Última atualização: 13 de Março de 2023, ás 15:22 (P.M.)
+Adryan - Última atualização: 27 de Março de 2023, ás 19:05(PM)
 """
 
 # Imports de algumas features do projeto. 
 from tabela import Tabela
-from verificacao import Check
-from escolhaXouY import PlayChoice
+from check_entry import SelectCasa
 from indice_Inc import Indice
 from gameResult import CheckWin
 
@@ -20,69 +19,66 @@ tabela = Tabela(table)
 def loopMarc(table):
     o = 0
     x = 1
-    if x > o:
-        x = 0
-        o = 1
-                
-        # solicita entrada do usuário
-        playChoice = PlayChoice().playChoice
+    while True:
+        if  x > o:
+            # solicita entrada do usuário
+            playerEntry = input("\nEscolha uma casa entre 1 e 9: ")
+            playerChoice = SelectCasa(playChoice=playerEntry)
 
-        # Verifica se a entrada do usuário é válida
-        playChoice = Check(playChoice).checkNum()
-        
-        # Valor de entrada do jogador.
-        entry = playChoice 
+            # Verifica se a entrada do usuário é válida
+            ChoiceValid = playerChoice.CheckType()
+            ChoiceValid = playerChoice.CheckInterval()
+            
+            # Valor de entrada do jogador.
+            entry = ChoiceValid 
 
-        # instância da classe "Indice".
-        indice = Indice(x=entry) 
+            # instância da classe "Indice".
+            indice = Indice(x=entry) 
 
-        # Obtem a posição e o índice da posição do valor de entrada.
-        posicao, indice_posicao = indice.get_index()
+            # Obtem a posição e o índice da posição do valor de entrada.
+            posicao, indice_posicao = indice.get_index()
 
-        # Substitui o valor da posição por "X".
-        table[posicao][indice_posicao] = 'X' 
+            # Substitui o valor da posição por "X".
+            table[posicao][indice_posicao] = 'X' 
 
-        # Imprime a tabela
-        tabela.printTable()
-        
-        # Verifica se há um padrão 
-        checkResult = CheckWin()
-        checkResult.checkWin(table=tabela.table)
+            # Imprime a tabela
+            tabela.printTable()
 
-    if x < o:
-        o = 0
-  
-        # solicita entrada do usuário
-        playChoice = PlayChoice().playChoice
+            # Verifica se há um padrão
+            checkResult = CheckWin()
+            checkResult.checkWin(table=tabela.table)
+            x = 0
+            o = 1
 
-        # Verifica se a entrada do usuário é válida
-        playChoice = Check(playChoice).checkNum()
-        
-        # Valor de entrada do jogador.
-        entry = playChoice 
+        if o > x:
+            # solicita entrada do usuário
+            playerEntry = input("\rEscolha uma casa entre 1 e 9: ")
+            playerChoice = SelectCasa(playChoice=playerEntry)
+            
+            # Verifica se a entrada do usuário é válida
+            ChoiceValid = playerChoice.CheckType()
+            ChoiceValid = playerChoice.CheckInterval()
+            
+            # Valor de entrada do jogador.
+            entry = ChoiceValid 
 
-        # instância da classe "Indice".
-        indice = Indice(x=entry) 
+            # instância da classe "Indice".
+            indice = Indice(x=entry) 
 
-        # Obtem a posição e o índice da posição do valor de entrada.
-        posicao, indice_posicao = indice.get_index()
+            # Obtem a posição e o índice da posição do valor de entrada.
+            posicao, indice_posicao = indice.get_index()
 
-        # Substitui o valor da posição por "O".
-        table[posicao][indice_posicao] = "O"
-        
-        # Imprime a tabela
-        tabela.printTable()
-        
-        # Verifica se há um padrão 
-        checkResult = CheckWin()
-        checkResult.checkWin(table=tabela.table)
+            # Substitui o valor da posição por "O".
+            table[posicao][indice_posicao] = "O"
+            
+            # Imprime a tabela
+            tabela.printTable()
 
-    # Reinicia função. Todas as alterações foram salvas.
-    loopMarc(tabela.table)
+            # Verifica se há um padrão (OBS: Substituir por estrutura IF/ELSE/ELIF).
+            checkResult = CheckWin()
+            
+            checkResult.checkWin(table=tabela.table)
+            o = 0
+            x = 1
 
 loopMarc(table=tabela.table)
-
-""" 
->>> IDÉIA: Utilizar um laço de repetição ('while statment'), para executar o jogo até
-que dada condição seja atendida - condição de parada.
-"""
