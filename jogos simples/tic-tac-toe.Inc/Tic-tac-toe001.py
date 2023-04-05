@@ -1,5 +1,5 @@
 """ 
-Adryan - Última atualização: 27 de Março de 2023, ás 19:05(PM)
+Adryan - Última atualização: 05 de Abril de 2023, ás 14:25(PM)
 """
 
 # Imports de algumas features do projeto. 
