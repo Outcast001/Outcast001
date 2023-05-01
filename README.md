@@ -22,8 +22,4 @@
 <a href="https://Instagram.com/adryan.r1.dev" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=Instagram&logoColor=white"/></a>
 </div>
 
-<div>
-<a href="https://github.com/Outcast001">
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Outcast001&layout=compact&langs_count=7&theme=dracula">
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Outcast001&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"></a>
-</div>
+[![Adryan's GitHub stats](https://github-readme-stats.vercel.app/api?username=Outcast001&hide=contribs&count_private=true&show_icons=true&theme=merko)](https://github.com/Outcast001/github-readme-stats)
