@@ -59,7 +59,6 @@ while not (CheckWin().checkWin(table=table)):
     print(testeX)
     print(testeO)
 
-
 """
 OBSERVAÇÃO: A abordagem utiliza orientação a objetos.
             A proposta consiste em simular o comportamento de
