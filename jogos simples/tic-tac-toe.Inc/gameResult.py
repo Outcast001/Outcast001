@@ -9,9 +9,8 @@ class CheckWin():
     """
     def __init__(self) -> None:
         pass
-
     def checkWin(self, table):   
-
+                    
         def checkEmpate():
             # Verificando um empate
             lista = []
@@ -23,10 +22,6 @@ class CheckWin():
                     
                     if len(lista) == 9:
                         return(True)  
-        
-        if (checkEmpate()):
-            print("EMPATE.")
-            quit()
 
         # COLUNAS
         if (table[0][0] == "X" and table[0][1] == "X" and table[0][2] == "X"):
@@ -94,6 +89,10 @@ class CheckWin():
             
         elif (table[0][2] == "O" and table[1][1] == "O" and table[2][0] == "O"):
             print('"O" Win! (diagonal secundária)')
+            quit()
+        
+        elif (checkEmpate()):
+            print("EMPATE.")
             quit()
 
         else:
