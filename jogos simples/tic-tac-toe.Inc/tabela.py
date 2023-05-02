@@ -13,7 +13,7 @@ class Tabela():
         print(self.table[1])
         print(self.table[2])
 
-    def beatyPrint(self):
+    def beautyPrint(self):
         """Imprime a tabela num formato bonitinho."""
         print(
             "\n",
