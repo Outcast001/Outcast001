@@ -7,7 +7,6 @@ class CheckWin():
     """ 
     Verifica os casos nos quais 'X' ou 'O' vencem (ou empatam) no jogo da velha.
     """
-    
     def __init__(self) -> None:
         pass
 
