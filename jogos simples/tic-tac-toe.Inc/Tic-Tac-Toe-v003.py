@@ -43,26 +43,21 @@ class Player():
                 return "Error: {404}"
             
         return_value = loop(simbolo=self.simbolo)
-        return return_value
-                
-        
+        return(return_value, table)
+
 table = [[1,2,3],
          [4,5,6],
          [7,8,9]]
 
 while not (CheckWin().checkWin(table=table)):
-    """ Laço executa enquanto não houver um vencedor ou empate. """
+    """ Laço executa enquanto não houver um vencedor ou um empate. """
     jogador_X = Player(table=table, simbolo="X")
     jogador_O = Player(table=table, simbolo="O")
-    testeX = jogador_X.select_field()
-    testeO = jogador_O.select_field()
-    print(testeX)
-    print(testeO)
 
-"""
-OBSERVAÇÃO: A abordagem utiliza orientação a objetos.
-            A proposta consiste em simular o comportamento de
-            um jogador de jogo da velha (ele sabe que se ele jogou uma vez 
-            não poderá jogar de novo, assim como não pode marcar uma casa 
-            já marcada) o que tem se mostrado uma tarefa complexa, mas não insolúvel.
-"""
+    jogador_X.select_field()
+    ''' Verifica o resultado do jogo após a vez do jogador "X".'''
+    CheckWin().checkWin(table=table)
+
+    jogador_O.select_field()
+    ''' Verifica o resultado do jogo após a vez do jogador "O".'''
+    CheckWin().checkWin(table=table)
