@@ -34,7 +34,7 @@ class Player():
             """ Marca a casa selecionada pelo usuário se ela estiver livre (não ocupada)."""
             if casa.isnumeric():
                 self.table[posicao][indice_posicao] = simbolo
-                tabuleiro.beatyPrint()
+                tabuleiro.beautyPrint()
                 
                 return (f"Sucessfully: {200}", table)
             else:
