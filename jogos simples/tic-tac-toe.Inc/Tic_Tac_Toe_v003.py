@@ -28,9 +28,11 @@ class Player():
             
             # Instância da classe "Indice"
             indice = Indice(x=input_x)
+
             """ Obtém a posicao e o indice da posicao da entrada. """
             posicao, indice_posicao = indice.get_index()
             casa = f"{self.table[posicao][indice_posicao]}"
+            
             """ Marca a casa selecionada pelo usuário se ela estiver livre (não ocupada)."""
             if casa.isnumeric():
                 self.table[posicao][indice_posicao] = simbolo
@@ -49,15 +51,16 @@ table = [[1,2,3],
          [4,5,6],
          [7,8,9]]
 
-while not (CheckWin().checkWin(table=table)):
-    """ Laço executa enquanto não houver um vencedor ou um empate. """
-    jogador_X = Player(table=table, simbolo="X")
-    jogador_O = Player(table=table, simbolo="O")
+def main():    
+    while not (CheckWin().checkWin(table=table)):
+        """ Laço executa enquanto não houver um vencedor ou um empate. """
+        jogador_X = Player(table=table, simbolo="X")
+        jogador_O = Player(table=table, simbolo="O")
 
-    jogador_X.select_field()
-    ''' Verifica o resultado do jogo após a vez do jogador "X".'''
-    CheckWin().checkWin(table=table)
+        jogador_X.select_field()
+        ''' Verifica o resultado do jogo após a vez do jogador "X".'''
+        CheckWin().checkWin(table=table)
 
-    jogador_O.select_field()
-    ''' Verifica o resultado do jogo após a vez do jogador "O".'''
-    CheckWin().checkWin(table=table)
+        jogador_O.select_field()
+        ''' Verifica o resultado do jogo após a vez do jogador "O".'''
+        CheckWin().checkWin(table=table)
