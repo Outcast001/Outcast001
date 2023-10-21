@@ -1,4 +1,4 @@
-![snake gif](https://raw.githubusercontent.com/Outcast001/Outcast001/output/github-contribution-grid-snake.svg)
+<!-- ![snake gif](https://raw.githubusercontent.com/Outcast001/Outcast001/output/github-contribution-grid-snake.svg) -->
 
 # 👋 Hello! Welcome to my Github profile.
 ## My name is Adryan and my nickname is "Ramon"!
@@ -12,7 +12,7 @@
 - 😄 Pronouns: he/him...
 - ⚡ Curiosity: If you interact with me I will be very happy! - Really. I'm so lonely...
 
-![Snake animation](https://github.com/Outcast001/Outcast001/blob/output/github-contribution-grid-snake.svg)
+<!-- ![Snake animation](https://github.com/Outcast001/Outcast001/blob/output/github-contribution-grid-snake.svg) -->
 
 <h6>I graduated as a computer technician from IFNMG in July of this year and I will graduate from high school also this year (November 2023)</h6>
 <h6>Throughout the year, I had experiences that gave me a taste of what it's like to work in the field of technology and programming...</h6>
